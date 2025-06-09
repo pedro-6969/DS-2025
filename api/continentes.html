@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de continentes</title>
+</head>
+<style>
+    * { margin: 0; }
+    body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    select{
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #country-info{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 20px;
+    }
+    .pais{
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 15px;
+        text-align: center;
+    }
+    div img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    header{
+        margin: 15px;
+        border-radius: 10px;
+        padding: 15px;
+        border: 2px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<body>
+    <header>
+        <h1>Seleção de continentes</h1>
+        <select name="" id="region-select" onchange="filtroRegiao()">
+            <option value="">Selecione uma região</option>
+            <option value="Africa">África</option>
+            <option value="Americas">Américas</option>
+            <option value="Asia">Ásia</option>
+            <option value="Europe">Europa</option>
+        </select>
+    </header>
+    
+    <div id="country-info">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
