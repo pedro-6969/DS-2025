@@ -1,5 +1,5 @@
 function getCountry(){
-    let input_search = document.querySelector("#input-search").ariaValueMax.trim();
+    let input_search = document.querySelector("#input-search").value.trim();
     let url = `https://restcountries.com/v3.1/name/${input_search}`;
     let output = document.querySelector("#country-info");
 
