@@ -1,6 +1,7 @@
 function buscarPokemon(){
     let pkm_name1 = document.querySelector("#pkm_name1").value;
     let pkm_name2 = document.querySelector("#pkm_name2").value;
+    document.querySelector("#resultado").innerHTML = '';
     
     fetch(`https://pokeapi.co/api/v2/pokemon/${pkm_name2}`)
     .then(resposta =>{
