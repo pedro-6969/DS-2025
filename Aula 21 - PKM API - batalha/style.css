@@ -1,0 +1,134 @@
+/* Importa fonte estilo game retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background: radial-gradient(circle at center, #ffcb05, #e3350d);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Título estilo Pokédex */
+h1 {
+  font-size: 22px;
+  color: #2a75bb;
+  text-shadow: 2px 2px #ffcb05;
+  margin-bottom: 20px;
+}
+
+/* Inputs e botões */
+input[type="text"] {
+  padding: 8px;
+  border: 2px solid #2a75bb;
+  border-radius: 8px;
+  outline: none;
+  text-transform: lowercase;
+}
+
+button {
+  padding: 10px 16px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px #7a0000;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ffcb05, #e6b800);
+  color: #000;
+}
+
+/* Áreas dos Pokémon */
+#resultado, #resultado2 {
+  margin: 20px auto;
+  padding: 15px;
+  width: 300px;
+  border: 3px solid #2a75bb;
+  border-radius: 20px;
+  background: #fff;
+  color: #000;
+  box-shadow: inset 0 0 15px #2a75bb, 0 0 10px #000;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+#resultado:hover, #resultado2:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+#resultado img, #resultado2 img {
+  margin-top: 10px;
+  width: 120px;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Animação de sprite flutuando */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Barra de HP estilo game */
+progress {
+  width: 250px;
+  height: 20px;
+  appearance: none;
+  margin-top: 5px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #00ff00, #009900);
+  border-radius: 10px;
+}
+
+/* Área de batalha */
+h2 {
+  margin: 20px 0 10px;
+  color: #ffcb05;
+  text-shadow: 2px 2px #000;
+}
+
+#resultadoBatalha {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#resultadoLog {
+  background: rgba(0,0,0,0.6);
+  border-radius: 15px;
+  padding: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 12px;
+}
+
+/* Log animado */
+#resultadoLog p {
+  margin: 6px 0;
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}

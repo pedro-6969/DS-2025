@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>API do Pokemon</h1>
+<input type="text" id="pkm_name" placeholder="Insira o nome do Pokemon">
+<button onclick="buscarPokemon()">Buscar</button>
+<div id="resultado">...</div>
+<progress id="hp1" value="0" max="100"></progress>
+<br>
+<input type="text" id="pkm_name2" placeholder="Insira o nome do Pokemon">
+<button onclick="buscarPokemon2()">Buscar</button>
+<div id="resultado2">...</div>
+<progress id="hp2" value="0" max="100"></progress>
+
+<h2>Log de batalha</h2>
+<button onclick="batalhar()">Iniciar Batalha</button>
+<div id="resultadoBatalha">...</div>
+<div id="resultadoLog">...</div>
+
+<script src="js/Pokemon.js"></script>
+<script src="js/main.js"></script>
+    
+</body>
+</html>
