@@ -22,10 +22,29 @@ function cadastrarTreinador(){
     limparCampos();
 }
 
+function atualizarTreinador(index){
+    let treinadores = carregarTreinadores();
+
+    const nome = document.querySelector("#nome-treinador").value;
+    const idade = document.querySelector("#idade-treinador").value;
+    const cidade = document.querySelector("#cidade-treinador").value;
+
+    treinadores[index] = new Treinador(nome, idade, cidade);
+
+    salvarTreinadores(treinadores);
+    limparCampos();
+    window.location.href = "listar-treinador.html";
+}
+
+function excluirTreinador(index){
+    let treinadores = carregarTreinadores();
+    treinadores.splice(index, 1);
+    salvarTreinadores(treinadores);
+    listarTreinador();
+}
+
 function limparCampos(){
     document.querySelector("#nome-treinador").value = "";
     document.querySelector("#idade-treinador").value = "";
     document.querySelector("#cidade-treinador").value = "";
 }
-
-window.cadastrarTreinador = cadastrarTreinador;

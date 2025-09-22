@@ -20,7 +20,7 @@
       treinadores.forEach((treinador, i) => {
         lista_treinador.innerHTML += `<li>${treinador.nome} - ${treinador.idade} - ${treinador.cidade}</li>
         <a href="atualizar-treinador.html?index=${i}">Atualizar</a>
-        <button onclick="deletarTreinador(${i})">Excluir</button></li>`;
+        <button onclick="excluirTreinador(${i})">Excluir</button></li>`;
       });
     }
 
