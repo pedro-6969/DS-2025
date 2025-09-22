@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Treinadores</title>
+</head>
+<body>
+  <h1>Treinadores cadastrados</h1>
+
+  <ul id="lista-treinador"></ul>
+
+  <script src="../js/treinador-crud.js"></script>
+  <script>
+    function listarTreinador(){
+      let treinadores = carregarTreinadores();
+      let lista_treinador = document.querySelector("#lista-treinador");
+
+      lista_treinador.innerHTML = "";
+      treinadores.forEach((treinador, i) => {
+        lista_treinador.innerHTML += `<li>${treinador.nome} - ${treinador.idade} - ${treinador.cidade}</li>
+        <a href="atualizar-treinador.html?index=${i}">Atualizar</a>
+        <button onclick="deletarTreinador(${i})">Excluir</button></li>`;
+      });
+    }
+
+    listarTreinador();
+  </script>
+</body>
+</html>
