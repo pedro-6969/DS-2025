@@ -37,8 +37,7 @@ function atualizarTreinador(index){
     const idade = document.querySelector("#idade-treinador").value;
     const cidade = document.querySelector("#cidade-treinador").value;
 
-    treinadores[index] = new Treinador(nome, idade, cidade);
-
+    treinadores[index] = new Treinador(nome, idade, cidade);    
     salvarTreinadores(treinadores);
     limparCampos();
     window.location.href = "listar-treinador.html";
