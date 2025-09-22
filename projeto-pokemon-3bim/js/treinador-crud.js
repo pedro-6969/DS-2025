@@ -22,6 +22,14 @@ function cadastrarTreinador(){
     limparCampos();
 }
 
+function buscarDados(index){
+    let treinadores = carregarTreinadores();
+
+    document.querySelector("#nome-treinador").value = treinadores[index].nome;
+    document.querySelector("#idade-treinador").value = treinadores[index].idade;
+    document.querySelector("#cidade-treinador").value = treinadores[index].cidade;
+}
+
 function atualizarTreinador(index){
     let treinadores = carregarTreinadores();
 
