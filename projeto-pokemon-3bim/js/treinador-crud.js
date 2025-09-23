@@ -26,10 +26,13 @@ let indice_atualizar = null;
 
 function buscarDados(index){
     let treinadores = carregarTreinadores();
+    if (index >= 0 && index < treinadores.length) {
+        indice_atualizar = index;
 
-    document.querySelector("#nome-treinador").value = treinadores[index].nome;
-    document.querySelector("#idade-treinador").value = treinadores[index].idade;
-    document.querySelector("#cidade-treinador").value = treinadores[index].cidade;
+        document.querySelector("#nome-treinador").value = treinadores[index].nome;
+        document.querySelector("#idade-treinador").value = treinadores[index].idade;
+        document.querySelector("#cidade-treinador").value = treinadores[index].cidade;
+    }
 }
 
 function atualizarTreinador(){
@@ -42,11 +45,11 @@ function atualizarTreinador(){
     const idade = document.querySelector("#idade-treinador").value;
     const cidade = document.querySelector("#cidade-treinador").value;
 
-    treinadores[indice_atualizar] = new Treinador(nome, idade, cidade);    
+    treinadores[indice_atualizar] = {nome: nome, idade: idade, cidade: cidade};    
     salvarTreinadores(treinadores);
-    
+
     limparCampos();
-    indiceEdicao = null;
+    listarTreinador();
 }
 
 function excluirTreinador(index){
@@ -60,4 +63,6 @@ function limparCampos(){
     document.querySelector("#nome-treinador").value = "";
     document.querySelector("#idade-treinador").value = "";
     document.querySelector("#cidade-treinador").value = "";
+
+    indice_atualizar = null;
 }
