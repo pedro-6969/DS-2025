@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha</title>
+</head>
+<body>
+    <label>Treinador:</label>
+    <select id="select-treinador"></select>
+
+    <label for="pokemon-name">Nome:</label>
+    <input type="text" id="pokemon-name" placeholder="Insira o nome do pokémon">
+
+    <div id="resultado"></div>
+
+    <button onclick="buscarPokemon()">Buscar Pokémon</button>
+
+    <button onclick="confirmarAdicao()">Adicionar Pokémon ao Treinador</button>
+
+    <script src="../js/Pokemon.js"></script>
+    <script src="../js/treinador-crud.js"></script>
+</body>
+</html>
