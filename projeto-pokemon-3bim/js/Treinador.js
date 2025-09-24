@@ -3,6 +3,5 @@ class Treinador{
         this.nome = nome;
         this.idade = idade;
         this.cidade = cidade;
-        this.pokemons = [];
     }
 }

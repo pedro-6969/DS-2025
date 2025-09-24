@@ -137,11 +137,11 @@ function batalhar() {
 
       // exibindo vencedor
       if (hp1 <= 0 && hp2 <= 0) {
-        document.getElementById("resultadoBatalha").innerHTML = "<h2>Empate!</h2>";
+        document.querySelector("#resultado-batalha").innerHTML = "<h2>Empate!</h2>";
       } else if (hp1 <= 0) {
-        document.getElementById("resultadoBatalha").innerHTML = `<h2>${pokemon2.nome} venceu!</h2>`;
+        document.querySelector("#resultado-batalha").innerHTML = `<h2>${pokemon2.nome} venceu!</h2>`;
       } else {
-        document.getElementById("resultadoBatalha").innerHTML = `<h2>${pokemon1.nome} venceu!</h2>`;
+        document.querySelector("#resultado-batalha").innerHTML = `<h2>${pokemon1.nome} venceu!</h2>`;
       }
     }
   }, 1000);

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha</title>
+</head>
+<body>
+    <div>
+        <label>Treinador:</label>
+        <select id="select-treinador1"></select>
+    
+        <label for="pokemon-name">Nome:</label>
+        <input type="text" id="pokemon-name1" placeholder="Insira o nome do pokémon">
+    
+        <div id="resultado1"></div>
+        <progress id="hp1" value="0" max="100"></progress>
+    
+        <button onclick="buscarPokemon1()">Buscar Pokémon</button>
+    </div>
+
+    <div>
+        <label>Treinador:</label>
+        <select id="select-treinador2"></select>
+    
+        <label for="pokemon-name">Nome:</label>
+        <input type="text" id="pokemon-name2" placeholder="Insira o nome do pokémon">
+    
+        <div id="resultado2"></div>
+        <progress id="hp2" value="0" max="100"></progress>
+    
+        <button onclick="buscarPokemon2()">Buscar Pokémon</button>
+    </div>
+
+    <div>
+        <h2>Log de batalha</h2>
+        <button onclick="batalhar()">Iniciar Batalha</button>
+        <div id="resultado-batalha"></div>
+        <div id="resultado-log"></div>
+    </div>
+
+    <script src="../js/Pokemon.js"></script>
+    <script src="../js/treinador-crud.js"></script>
+    <script src="../js/batalhar.js"></script>
+</body>
+</html>

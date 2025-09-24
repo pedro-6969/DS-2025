@@ -69,13 +69,13 @@ function limparCampos(){
 
 // pokemon-treinador
 
-let pokemon = null;
-let hp;
+let pokemon1 = null;
+let hp1;
 
-function buscarPokemon(){
-    let pokemon_name = document.querySelector("#pokemon-name").value;
+function buscarPokemon1(){
+    let pokemon_name1 = document.querySelector("#pokemon-name1").value;
 
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon_name}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon_name1}`)
     .then(resposta => {
         if(!resposta.ok){
             throw new Error("Pokémon não encontrado");
@@ -89,58 +89,84 @@ function buscarPokemon(){
         const ataque = dados.stats[1].base_stat;
         const defesa = dados.stats[2].base_stat;
         const sprite = dados.sprites.front_default;
-        const p = new Pokemon(nome, tipo, hp, ataque, defesa, sprite);
-        document.querySelector("#resultado").innerHTML = `
-        <h1>${p.nome}</h1>
-        <img src="${p.sprite}">
+        const p1 = new Pokemon(nome, tipo, hp, ataque, defesa, sprite);
+        document.querySelector("#resultado1").innerHTML = `
+        <h1>${p1.nome}</h1>
+        <img src="${p1.sprite}">
         <ul>
-            <li>Tipo: ${p.tipo}</li>
-            <li>Hp: ${p.hp}</li>
-            <li>Ataque: ${p.ataque}</li>
-            <li>Defesa: ${p.defesa}</li>
+            <li>Tipo: ${p1.tipo}</li>
+            <li>Hp: ${p1.hp}</li>
+            <li>Ataque: ${p1.ataque}</li>
+            <li>Defesa: ${p1.defesa}</li>
         </ul>
         `;
-        pokemon = p;
-        hp = p.hp;
+        pokemon1 = p1;
+        hp = p1.hp;
     })
     .catch(erro => {
         alert(erro.message);
     });
-
-    
 }
 
-function adicionarPokemonAoTreinador(nome_treinador, pokemon){
-    let treinadores = carregarTreinadores();
-    let treinador = treinadores.find(t => t.nome === nome_treinador);
+let select_treinador1 = document.querySelector("#select-treinador1");
 
-    if(treinador) {
-        treinador.pokemons.push(pokemon);
-        salvarTreinadores(treinadores);
-    }
-}
-
-function confirmarAdicao(){
-    const select = document.querySelector("#select-treinador").value;
-    if (!nomeTreinador) {
-        alert("Escolha um treinador!");
-        return;
-    }
-    if (!pokemon) {
-        alert("Busque um Pokémon antes de adicionar!");
-        return;
-    }
-    adicionarPokemonAoTreinador(select, pokemon);
-}
-
-let select_treinador = document.querySelector("#select-treinador");
-
-if(select_treinador){
+if(select_treinador1){
     let treinadores = carregarTreinadores();
     treinadores.forEach(t => {
-        let option = document.createElement("option");
-        option.value = t.nome;
-        option.textContent = t.nome;
-        select_treinador.appendChild(option);
+        let option1 = document.createElement("option");
+        option1.value = t.nome;
+        option1.textContent = t.nome;
+        select_treinador1.appendChild(option1);
+    });
+}
+
+let pokemon2 = null;
+let hp2;
+
+function buscarPokemon2(){
+    let pokemon_name2 = document.querySelector("#pokemon-name2").value;
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon_name2}`)
+    .then(resposta => {
+        if(!resposta.ok){
+            throw new Error("Pokémon não encontrado");
+        }
+        return resposta.json();
+    })
+    .then(dados => {
+        const nome = dados.name;
+        const tipo = dados.types.map(t => t.type.name);
+        const hp = dados.stats[0].base_stat;
+        const ataque = dados.stats[1].base_stat;
+        const defesa = dados.stats[2].base_stat;
+        const sprite = dados.sprites.front_default;
+        const p2 = new Pokemon(nome, tipo, hp, ataque, defesa, sprite);
+        document.querySelector("#resultado2").innerHTML = `
+        <h1>${p2.nome}</h1>
+        <img src="${p2.sprite}">
+        <ul>
+            <li>Tipo: ${p2.tipo}</li>
+            <li>Hp: ${p2.hp}</li>
+            <li>Ataque: ${p2.ataque}</li>
+            <li>Defesa: ${p2.defesa}</li>
+        </ul>
+        `;
+        pokemon2 = p2;
+        hp2 = p2.hp;
+    })
+    .catch(erro => {
+        alert(erro.message);
+    });
+}
+
+let select_treinador2 = document.querySelector("#select-treinador2");
+
+if(select_treinador2){
+    let treinadores = carregarTreinadores();
+    treinadores.forEach(t => {
+        let option2 = document.createElement("option");
+        option2.value = t.nome;
+        option2.textContent = t.nome;
+        select_treinador2.appendChild(option2);
     });
 }
