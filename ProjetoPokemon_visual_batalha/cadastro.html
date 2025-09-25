@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cadastrar Treinador</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Cadastrar Treinador</h1>
+  <nav>
+    <a href="index.html">Menu</a>
+    <a href="lista.html">Lista de Treinadores</a>
+    <a href="batalha.html">Batalhas</a>
+  </nav>
+</header>
+
+<main class="card">
+  <form id="formTreinador">
+    <label>Nome:</label>
+    <input type="text" id="nome" required placeholder="Ex: Ash Ketchum">
+    <label>Idade:</label>
+    <input type="number" id="idade" min="1" required>
+    <label>Cidade:</label>
+    <input type="text" id="cidade" required placeholder="Ex: Pallet Town">
+
+    <hr>
+
+    <h3>Buscar Pokémon (PokeAPI)</h3>
+    <div class="flex">
+      <input type="text" id="pkm_search" placeholder="Nome do Pokemon (ex: pikachu)">
+      <button type="button" id="btnBuscarPkm">Buscar</button>
+    </div>
+    <div id="pkmPreview"></div>
+    <button type="button" id="btnAdicionarPkm">Adicionar Pokémon ao Treinador</button>
+
+    <hr>
+    <button type="submit">Salvar Treinador</button>
+  </form>
+  <div class="footer-small">Os pokémons adicionados ao treinador ficarão salvos no localStorage.</div>
+</main>
+
+<script src="js/Pokemon.js"></script>
+<script src="js/Treinador.js"></script>
+<script src="js/treinador_storage.js"></script>
+<script src="js/cadastro.js"></script>
+</body>
+</html>

@@ -16,15 +16,14 @@ function batalhar(){
                 let dano = Math.max(1, pokemon1.ataque - pokemon2.defesa);
                 hp2 -= dano;
                 document.querySelector("#hp2").value = hp2;
-                log += `<p>${pokemon1.nome} atacou ${pokemon2.nome} e causou ${dano} de dano</p>`;
+                document.querySelector("#resultado-log").innerHTML += `<p>${pokemon1.nome} atacou ${pokemon2.nome} e causou ${dano} de dano</p>`;
             }
             else{
                 let dano = Math.max(1, pokemon2.ataque - pokemon1.defesa);
                 hp1 -= dano;
                 document.querySelector("#hp1").value = hp1;
-                log += `<p>${pokemon2.nome} atacou ${pokemon1.nome} e causou ${dano} de dano</p>`;
+                document.querySelector("#resultado-log").innerHTML += `<p>${pokemon2.nome} atacou ${pokemon1.nome} e causou ${dano} de dano</p>`;
             }
-            document.querySelector("#resultado-log").innerHTML = log;
             turno++;
         }
         else{

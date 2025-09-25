@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+}
+:root{
+    --primary-color: #161F30;
+    --secondary-color: #173540;
+    --terciary-color: #217373;
+    --quarternary-color: #84B026;
+    --quinary-color: #545a48;
+    --black: rgb(17, 17, 17);
+    --white: rgb(221, 221, 221);
+    --gray: rgb(189, 189, 189);
+    
+}
+body{
+    font-family: "Afacad", sans-serif;
+    background-color: var(--gray);
+}
+h1, a{
+    font-size: 30px;
+    color: var(--white);
+    text-decoration: none;
+}
+h2{
+    font-size: 22px;
+    color: var(--black);
+}
+p, input, label, button{
+    font-size: 20px;
+    color: var(--black);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.container div {
+    width: 500px;
+    height: 200px;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    margin-top: 50px;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+header div a{
+    padding: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white);
+}
+input{
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 5px;
+    border: var(--primary-color) solid 2px;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+label{
+    width: 100%;
+}
+button{
+    width: 50%;
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 5px;
+    border: var(--primary-color) solid 2px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    margin: 5px;
+    padding: 5px;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+/* Ajustes para o batalhar.html */
+header .logo-home {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo-home img.logo {
+    width: 50px;
+    height: 50px;
+}
+
+header .nav-links a {
+    margin-left: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 550px;
+    padding: 20px;
+}
+
+.pokemon-block {
+    width: 100%;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pokemon-block button {
+    align-self: center;
+    width: 60%;
+}
+
+.log-batalha {
+    width: 100%;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+progress {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+}
+/* Bloco do Pokémon buscado */
+#resultado1, #resultado2 {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#resultado1 h1, #resultado2 h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#resultado1 img, #resultado2 img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+#resultado1 ul, #resultado2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#resultado1 li, #resultado2 li {
+    font-size: 18px;
+    margin: 5px 0;
+    text-transform: capitalize;
+}
+/* Estilo geral do header */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header div a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 20px;
+}
+
+header div img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Container principal */
+body > div {
+    width: 550px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Títulos */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+/* Lista de treinadores */
+#lista-treinador {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+#lista-treinador li {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+/* Inputs de edição */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: var(--primary-color) solid 2px;
+    box-sizing: border-box;
+}
+
+/* Botão */
+button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: var(--primary-color) solid 2px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

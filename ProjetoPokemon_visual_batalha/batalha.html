@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Batalhas Pokémon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Batalhas Pokémon</h1>
+  <nav>
+    <a href="index.html">Menu</a>
+    <a href="cadastro.html">Cadastrar</a>
+    <a href="lista.html">Lista</a>
+  </nav>
+</header>
+
+<main class="card">
+  <div class="flex" style="gap:20px;">
+    <div style="flex:1">
+      <label>Treinador 1:</label>
+      <select id="treinador1" class="pkm-select"></select>
+      <label>Pokémon 1:</label>
+      <select id="pkm1" class="pkm-select"></select>
+      <progress id="hp1" class="progress" value="0" max="100"></progress>
+    </div>
+
+    <div style="flex:1">
+      <label>Treinador 2:</label>
+      <select id="treinador2" class="pkm-select"></select>
+      <label>Pokémon 2:</label>
+      <select id="pkm2" class="pkm-select"></select>
+      <progress id="hp2" class="progress" value="0" max="100"></progress>
+    </div>
+  </div>
+
+  <div style="margin-top:12px;">
+    <button id="btnIniciar">Iniciar Batalha</button>
+    <button id="btnLimparLog">Limpar Log</button>
+  </div>
+
+  <h3>Resultado</h3>
+  <div id="resultadoBatalha"></div>
+  <h3>Log de Batalha</h3>
+  <div id="log" class="log-box"></div>
+
+  <hr>
+  <h3>Histórico de Batalhas</h3>
+  <div id="historico"></div>
+</main>
+
+<script src="js/Pokemon.js"></script>
+<script src="js/Treinador.js"></script>
+<script src="js/treinador_storage.js"></script>
+<script src="js/batalha.js"></script>
+</body>
+</html>

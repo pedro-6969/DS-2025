@@ -4,23 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro de treinador</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <h1>Cadastrar Treinador</h1>
+  <header>
+        <div>
+            <img src="" alt="Pokebola">
+            <a href="home.html">Home</a>
+        </div>
+        <div>
+            <a href="cadastrar-treinador.html">Cadastro</a>
+            <a href="listar-treinador.html">Lista</a>
+            <a href="batalhar.html">Batalhar</a>
+        </div>
+    </header>
+  <div class="form">
+    <h1 style="color: var(--black);">Cadastrar Treinador</h1>
 
-    <label for="nome-treinador">Nome</label>
-    <input type="text" id="nome-treinador" placeholder="Insira o nome">
-  
-    <label for="idade-treinador">Idade</label>
-    <input type="number" id="idade-treinador" placeholder="Insira a idade">
-  
-    <label for="cidade-treinador">Cidade</label>
-    <input type="text" id="cidade-treinador" placeholder="Insira a cidade">
-  
-    <button onclick="cadastrarTreinador()">Cadastrar</button>
+      <label for="nome-treinador">Nome</label>
+      <input type="text" id="nome-treinador" placeholder="Insira o nome">
 
-    <a href="listar-treinador.html">Link</a>
-   
+      <label for="idade-treinador">Idade</label>
+      <input type="number" id="idade-treinador" placeholder="Insira a idade">
+
+
+      <label for="cidade-treinador">Cidade</label>
+      <input type="text" id="cidade-treinador" placeholder="Insira a cidade">
+
+    
+      <button onclick="cadastrarTreinador()">Cadastrar</button>   
+  </div>
 
   <script src="../js/Treinador.js"></script>
   <script src="../js/treinador-crud.js"></script>
