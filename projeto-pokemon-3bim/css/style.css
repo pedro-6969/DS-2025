@@ -101,7 +101,7 @@ button:hover{
     transform: scale(1.1);
     transition: 0.5s;
 }
-/* Ajustes para o batalhar.html */
+
 header .logo-home {
     display: flex;
     align-items: center;
@@ -154,7 +154,7 @@ progress {
     height: 25px;
     border-radius: 5px;
 }
-/* Bloco do Pokémon buscado */
+
 #resultado1, #resultado2 {
     background-color: var(--secondary-color);
     color: var(--white);
@@ -189,7 +189,7 @@ progress {
     margin: 5px 0;
     text-transform: capitalize;
 }
-/* Estilo geral do header */
+
 header {
     background-color: var(--primary-color);
     display: flex;
@@ -209,7 +209,6 @@ header div img {
     height: 50px;
 }
 
-/* Container principal */
 body > div {
     width: 550px;
     margin: 40px auto;
@@ -219,14 +218,12 @@ body > div {
     box-sizing: border-box;
 }
 
-/* Títulos */
 h1 {
     font-size: 28px;
     margin-bottom: 20px;
     color: var(--black);
 }
 
-/* Lista de treinadores */
 #lista-treinador {
     list-style: none;
     padding: 0;
@@ -245,7 +242,6 @@ h1 {
     text-transform: capitalize;
 }
 
-/* Inputs de edição */
 input {
     width: 100%;
     padding: 8px;
@@ -255,7 +251,6 @@ input {
     box-sizing: border-box;
 }
 
-/* Botão */
 button {
     width: 50%;
     padding: 10px;
